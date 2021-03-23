@@ -42,10 +42,18 @@ $(".timeslot").each(function() {
 //pass data into modal
 $(".editData").click(function() {
     //traverses DOM to select HTML content of timeslot column of respective 'edit' button.  // Is there a better way?
-    var name = $(this).parent().siblings().prev().html();  
+    var chosenTime = $(this).parent().siblings().prev().html();  
+    
     //passes HTML content of time slot into text of chosen-time span tag
-    $("#chosen-time").html(name);                           
-
-
+    $("#chosen-time").html(chosenTime);                           
 });
 
+//takes 'event description' in modal and passes to user interface
+$('#saveBtn').click(function() {
+    // gets value of user input
+    var eventInformation = $('#eventDescription').val();   
+    
+    // sets value of eventInformation content of .eventInfo in schedule table. 
+    $('.eventInfo').html(eventInformation);  //current changes all event descriptions
+    
+})
