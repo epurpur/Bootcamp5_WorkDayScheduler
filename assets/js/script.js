@@ -12,35 +12,26 @@ var minute = moment().minutes();
 console.log(hour, minute);
 
 
-//get data back from table rows (specifically the hour)
-// $(
-//     function(){
-//         $(".timeslot").click(
-//           function(event){
-//               element = $(this).html();
-//               console.log(element);
-//           }
-//         )
-//     }
-//   )
 
 //loop over each timeslot and get data attribute 'time' from it
-$(".timeslot").each(function(index) {
-    var time = $(this).data("time");
-    // var now = moment().hour();    //uses current hour to evaluate colors of table row
+//depending on time, dynamically colors each row of the table gray, red, green
+//if hour has not passed, add 'edit' button to third column
+$(".timeslot").each(function() {
+    var time = $(this).data("time");                                //gets value of data-time attribute from HTML of each table row
+    // var now = moment().hour();                                   //uses current hour to evaluate colors of table row
     var now = 13;
     if (time < now) {
-        $(this).parent().css({"backgroundColor": "gray"});
+        $(this).parent().css({"backgroundColor": "gray"});          // change table row css if condition is true
     } else if (time == now) {
-        $(this).parent().css({"backgroundColor": "red"});
+        $(this).parent().css({"backgroundColor": "red"});          // change table row css if condition is true
+        //line below the following HTML for edit button to 2nd sibling, which is 3rd column of time table. Button opens 'edit event' modal
+        $(this).siblings().next().append("<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#editEvent' type='submit'>Edit</button>") 
     } else if (time > now) {
         $(this).parent().css({"backgroundColor": "green"});
+        //line adds the following HTML for edit button to 2nd sibling, which is 3rd column of time table. Button opens 'edit event' modal
+        $(this).siblings().next().append("<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#editEvent' type='submit'>Edit</button>") //this adds the following HTML for edit button to 2nd sibling, which is 3rd column of time table
     }
 });
-  
-
-//change table row color with javascript. change parent of table row
-// $("#rowTest").parent().css({"backgroundColor": "green"});
 
 
 
