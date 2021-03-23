@@ -12,70 +12,72 @@
   </head>
 
   <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">Current Date and Time: <span id='moment-time'>XX </span></p>
-    </header>
-    <div class="container col-12">
-      <!-- Timeblocks go here -->
-      <table class="table table-bordered justify-content-center time-table">
-          <tbody>
-              <tr>
-                  <td class="timeslot text-center">8:00 - 9:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">9:00 - 10:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">10:00 - 11:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">11:00 - 12:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">12:00 - 13:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">13:00 - 14:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">14:00 - 15:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">15:00 - 16:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">16:00 - 17:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-              <tr>
-                  <td class="timeslot text-center">17:00 - 18:00</td>
-                  <td class="w-75">Event</td>
-                  <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
-              </tr>
-          </tbody>
-      </table>
+    <main>
+        <header class="jumbotron">
+            <h1 class="display-3">Work Day Scheduler</h1>
+            <p class="lead">A simple calendar app for scheduling your work day</p>
+            <p id="currentDay" class="lead">Current Date and Time: <span id="moment-time">XXX </span></p>
+        </header>
 
+        <div id="colors-legend"> Add colors legend here (gray, red, green boxes) </div>
 
-    </div>
+        <div class="container col-12">
+        <!-- Timeblocks go here -->
+        <table class="table table-bordered justify-content-center time-table">
+            <tbody>
+                <tr>
+                    <td class="timeslot text-center" data-time="8" id="rowTest">8am - 9am </td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="9">9am - 10am</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="10">10am - 11am</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="11">11am - 12pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="12">12pm - 1pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="13">1pm - 2pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="14">2pm - 3pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="15">3pm - 4pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="16">4pm - 5pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+                <tr>
+                    <td class="timeslot text-center" data-time="17">5pm - 6pm</td>
+                    <td class="w-75">Event</td>
+                    <td class="text-center"><button class="btn btn-primary" type="submit">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Import jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> <!-- Import Moment.js -->
