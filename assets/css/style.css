@@ -20,6 +20,33 @@ body {
 }
 
 
+/* color legend */
+#color-legend {
+  margin: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  height: 50px;
+}
+
+#color-legend div {
+  width: 33%;
+  padding: 10px 0 10px 0;
+}
+
+#gray-column {
+  background-color: gray;
+}
+
+#red-column {
+  background-color: red;
+}
+
+#green-column {
+  background-color: green;
+}
 
 /* time blocks table */
 .table-bordered td {
