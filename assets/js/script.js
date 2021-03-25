@@ -38,7 +38,6 @@ $(document).ready(function() {
     //get current data from localStorage. If no data exists, return empty object
     var scheduledItems = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
     
-    
     var eventInfoItems = $(".eventInfo")                            //selects all rows of table, 2nd column
     
     $.each(eventInfoItems, function(index, object) {                //iterate through each row of schedule
@@ -135,8 +134,24 @@ $('#saveBtn').click(function() {
 });
 
 
+//clear schedule button. Clears all items from schedule. Clears all items from dailySchedule in localStorage
+$('#clearScheduleBtn').click(function() {
+    //get current data from localStorage. If no data exists, return empty object
+    var scheduledItems = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
 
+    //sets scheduled items to an empty object
+    var scheduledItems = {};
 
+    // //sets scheduledItems to localStorage as variable dailySchedule
+    localStorage.setItem('dailySchedule', JSON.stringify(scheduledItems));
+
+    //resets text content of eventInfo column to empty string
+    $(".eventInfo").each(function(i, object) {
+        var object = $(object);                                     //converts to jQuery object
+        object.html('');                                            //sets object text to empty string
+    });
+        
+});
 
 
 

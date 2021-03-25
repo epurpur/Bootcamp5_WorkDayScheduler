@@ -18,6 +18,10 @@ body {
   background-color: var(--background-color);
 }
 
+main {
+  margin-bottom: 10px;
+}
+
 /*********************/
 /* jumbotron header */
 /*********************/
@@ -95,3 +99,13 @@ tr {
 }
 
 
+/*************************/
+/* Clear Schedule Button */
+/*************************/
+#clearScheduleSection {
+  text-align: center;
+}
+
+#clearScheduleBtn {
+  width: 50%;
+}
