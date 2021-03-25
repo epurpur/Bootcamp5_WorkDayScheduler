@@ -2,7 +2,7 @@
 
 ## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app is available to view in the browser here: (https://epurpur.github.io/Bootcamp5_WorkDayScheduler/)[https://epurpur.github.io/Bootcamp5_WorkDayScheduler/]
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app is available to view in the browser here: https://epurpur.github.io/Bootcamp5_WorkDayScheduler/
 
 This app uses the following libraries: [Moment.js](https://momentjs.com/), [Bootstrap](https://getbootstrap.com/), [jQuery](https://api.jquery.com/), [Google Fonts](https://fonts.google.com/)
 
