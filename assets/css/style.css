@@ -1,18 +1,26 @@
 
-
-
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1;
-  background-color: rgb(230, 230, 230);
+/******************/
+/* Root Variables */
+/******************/
+:root {
+  --font-family: 'Open Sans', sans-serif;
+  --background-color: rgb(230, 230, 230);
+  --moment-time: rgb(255, 255, 255);
+  --gray-column: gray;
+  --red-column: red;
+  --green-column: green;
 }
 
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: 1;
+  background-color: var(--background-color);
+}
 
-
+/*********************/
 /* jumbotron header */
-
+/*********************/
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -22,12 +30,15 @@ body {
 }
 
 #moment-time {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--moment-time);
   border-radius: 5px;
   padding: 5px;
 }
 
+
+/****************/
 /* color legend */
+/****************/
 #color-legend {
   margin: 0 10% 0 10%;
   display: flex;
@@ -44,20 +55,21 @@ body {
 }
 
 #gray-column {
-  background-color: gray;
+  background-color: var(--gray-column);
 }
 
 #red-column {
-  background-color: red;
+  background-color: var(--red-column);
 }
 
 #green-column {
-  background-color: green;
+  background-color: var(--green-column);
 }
 
 
-
+/*********************/
 /* time blocks table */
+/*********************/
 .table-bordered td {
   border-color: black;
   vertical-align: middle;
@@ -73,7 +85,9 @@ tr {
 }
 
 
+/********************/
 /* Edit event modal */
+/********************/
 #eventDescription {
   margin-top: 5px;
   width: 100%;
