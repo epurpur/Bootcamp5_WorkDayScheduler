@@ -41,78 +41,79 @@
             <p id="currentDay" class="lead">Current Date and Time: <span id="moment-time"></span></p>
         </header>
 
-        <!-- I should be using bootstrap for this: https://getbootstrap.com/docs/4.0/layout/grid/
-        <div class="container" id="color-legend">
+        <!-- I should be using bootstrap for this: https://getbootstrap.com/docs/4.0/layout/grid/ 
+        <section class='container'>
             <div class="row">
                 <div class="col-4" id="gray-column">Past Hours</div>
                 <div class="col-4" id="red-column">Current Hour</div>
                 <div class="col-4" id="green-column">Future Hours</div>
             </div>
-        </div>
-        -->
-<!--I should do this with bootstrap instead-->
-        <div id="color-legend">
-            <div id="gray-column">Past Time</div>
-            <div id="red-column">Current Time</div>
-            <div id="green-column">Future Time</div>
-        </div>
+-->
 
-        <!-- Timeblocks go here -->
-        <section class="container col-12">
-            <table class="table table-bordered justify-content-center time-table">
-                <tbody>
-                    <tr>
-                        <td class="timeslot text-center" data-time="8" id="rowTest">8am - 9am </td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="9">9am - 10am</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="10">10am - 11am</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="11">11am - 12pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="12">12pm - 1pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="13">1pm - 2pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="14">2pm - 3pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="15">3pm - 4pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="16">4pm - 5pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                    <tr>
-                        <td class="timeslot text-center" data-time="17">5pm - 6pm</td>
-                        <td class="w-75 eventInfo">Free</td>
-                        <td class="text-center edit-btn"></td>
-                    </tr>
-                </tbody>
-            </table>
+
+            <div id="color-legend">
+                <div id="gray-column">Past Time</div>
+                <div id="red-column">Current Time</div>
+                <div id="green-column">Future Time</div>
+            </div>
+
+            <!-- Timeblocks go here -->
+            <section class="col-12">
+                <table class="table table-bordered justify-content-center time-table">
+                    <tbody>
+                        <tr>
+                            <td class="timeslot text-center" data-time="8" id="rowTest">8am - 9am </td>
+                            <td class="w-75 eventInfo" value="8">Free</td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="9">9am - 10am</td>
+                            <td class="w-75 eventInfo" value="9">Free</td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="10">10am - 11am</td>
+                            <td class="w-75 eventInfo" value="10">Free</td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="11">11am - 12pm</td>
+                            <td class="w-75 eventInfo" value="11">Free</td>
+                            <td class="text-center"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="12">12pm - 1pm</td>
+                            <td class="w-75 eventInfo" value="12">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="13">1pm - 2pm</td>
+                            <td class="w-75 eventInfo" value="13">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="14">2pm - 3pm</td>
+                            <td class="w-75 eventInfo" value="14">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="15">3pm - 4pm</td>
+                            <td class="w-75 eventInfo" value="15">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="16">4pm - 5pm</td>
+                            <td class="w-75 eventInfo" value="16">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                        <tr>
+                            <td class="timeslot text-center" data-time="17">5pm - 6pm</td>
+                            <td class="w-75 eventInfo" value="17">Free</td>
+                            <td class="text-center edit-btn"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </section>
     </main>
 
