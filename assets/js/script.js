@@ -10,6 +10,8 @@ function liveTime() {
 setInterval(liveTime, 1000);                                        //updates at interval of 1 minute (1000ms)
 
 
+
+
 //loop over each timeslot and get data attribute 'time' from it
 //depending on time, dynamically colors each row of the table gray, red, green
 //if hour has not passed, add 'edit' button to third column
@@ -17,6 +19,7 @@ $(".timeslot").each(function() {
     var time = $(this).data("time");                                //gets value of data-time attribute from HTML of each table row
     // var now = moment().hour();                                   //uses current hour to evaluate colors of table row
     var now = 13;
+
     if (time < now) {
         $(this).parent().css({"backgroundColor": "gray"});          // change table row css if condition is true
     } else if (time == now) {
@@ -74,14 +77,87 @@ $('#saveBtn').click(function() {
         // if data-value of .eventInfo == dataAttribute, set text of input box to that cell in scheduler
         if (object.attr('value') == dataAttribute) {
             object.html(eventInformation);
+            
+            //set values to localStorage
+            setLocalStorage(dataAttribute, eventInformation);
         }
-    })
+    });
 });
 
 
 
+function setLocalStorage(objKey, objValue) {
+    
+    //get current data from localStorage. If no data exists, return empty object
+    var dailySchedule = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
 
+    //updates key in dailySchedule and sets equal to objValue. if key doesn't exist yet, creates new key/value pair
+    dailySchedule[objKey] = objValue;
+    
+    //sets updated schedule to localStorage
+    localStorage.setItem('dailySchedule', JSON.stringify(dailySchedule));
+}
+
+
+// upon page load, sets values eventInfo cell in each row of calendar
+$(document).ready(function() {
+    
+    //get current data from localStorage. If no data exists, return empty object
+    var scheduledItems = JSON.parse(localStorage.getItem("dailySchedule") || "{}");
+    
+    //selects all rows of table, 2nd column
+    var eventInfoItems = $(".eventInfo")
+    //iterate through each row of schedule
+    $.each(eventInfoItems, function(i, object) {
+        var object = $(object);   //converts to jQuery object
+        var dataValue = object.attr('value');   
+
+        $.each(scheduledItems, function(key, value) {
+            console.log(key);   
+            if (key == dataValue) {
+                object.text(value);                                 // set text of object equal to value
+            }
+        });
+        
+    });
+
+    // $.each(scheduledItems, function(key, value) {
+    //     console.log(key, value); 
+    // });
+
+
+});
 
 
 
 ////////NEED TO SAVE DATA IN LOCAL STORAGE//////////
+
+//thinking about what I want the data structure of local storage to be
+/**
+ *  var data = {
+ *                  '8'  : 'Free',
+ *                  '9'  : 'Staff Meeting',
+ *                  '10' : 'Check email',
+ *                  '11' : 'Prepare Presentation'
+ *              }
+ */
+
+// var myObj = {}
+
+// myObj[8] = 'check emails';
+// myObj['9'] = 'staff meeting';
+// myObj['10'] = 'work on project';
+
+// console.log(myObj);
+
+// myObj['8'] = 'prepare presentation';
+// console.log(myObj);
+
+
+
+
+
+
+
+
+
