@@ -34,7 +34,7 @@ THEN the saved events persist
 
 
 ## Note for grader
-The calendar allows you to edit an event for the current hour or future hours only. Depending when you are grading this homework (especially if it is outside standard business hours), you will probably want to change this. To do so, view the script.js file (located in assets/js/ directories) and change lines 64 and 65. You will see in line 64 that I am getting a value for the current hour, from the moment.js library. You can switch this with line 65 to use a hard-coded hour value for your testing purposes.
+The calendar allows you to edit an event for the current hour or future hours only. Depending when you are grading this homework (especially if it is outside standard business hours), you will probably want to change this. To do so, view the script.js file (located in assets/js/ directories) and change lines 64 and 65. You will see in line 64 that I am getting a value for the current hour, from the moment.js library. You can switch this with line 65 to use a hard-coded hour value for your testing purposes. The UI will update dynamically depending on the hour.
 
 
 ## Preview
